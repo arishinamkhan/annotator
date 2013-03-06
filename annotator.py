@@ -70,56 +70,6 @@ class Annotator(wx.Frame):
         self.Centre()
         self.Show(True)    
 
-
-        #rootID = self.annotree.AddRoot("S", -1, -1, None)
-            #npId = self.annotree.AppendItem(rootID, "NP")
-            #vpId = self.annotree.AppendItem(rootID, "VP")
-            
-            # WILL COME FROM TREE PARSE ON THE LEFT
-            # noun phrase subtree
-            #a1 = self.annotree.AppendItem(npId, "A")
-            #npId2 = self.annotree.AppendItem(npId, "NP")
-            #a2 = self.annotree.AppendItem(npId2, "A")
-            #n1 = self.annotree.AppendItem(npId2, "N")
-            #self.annotree.AppendItem(a1, "Colorless")
-            #self.annotree.AppendItem(a2, "green")
-            #self.annotree.AppendItem(n1, "ideas")
-            
-            
-            # verb phrase subtree
-            #verbId = self.annotree.AppendItem(vpId, "V")
-            #AdvId = self.annotree.AppendItem(vpId, "Adv")
-            #self.annotree.AppendItem(verbId, "sleep")
-            #self.annotree.AppendItem(AdvId, "furiously")
-                #btnPanel = wx.Panel(panel, -1)
-                
-                #new = wx.Button(btnPanel, ID_NEW, 'New', size=(90, 30))
-                #ren = wx.Button(btnPanel, ID_RENAME, 'Rename', size=(90, 30))
-                #dlt = wx.Button(btnPanel, ID_DELETE, 'Delete', size=(90, 30))
-                #clr = wx.Button(btnPanel, ID_CLEAR, 'Clear', size=(90, 30))    
-
-                #self.Bind(wx.EVT_BUTTON, self.NewItem, id=ID_NEW)
-                #self.Bind(wx.EVT_BUTTON, self.OnRename, id=ID_RENAME)
-                #self.Bind(wx.EVT_BUTTON, self.OnDelete, id=ID_DELETE)
-                #self.Bind(wx.EVT_BUTTON, self.OnClear, id=ID_CLEAR)
-                #self.Bind(wx.EVT_LISTBOX_DCLICK, self.OnRename)
-
-                #vbox.Add((-1, 20))
-                #vbox.Add(new)
-                #vbox.Add(ren, 0, wx.TOP, 5)
-                #vbox.Add(dlt, 0, wx.TOP, 5)
-                #vbox.Add(clr, 0, wx.TOP, 5)
-
-                #btnPanel.SetSizer(vbox)
-                #hbox.Add(btnPanel, 0.6, wx.EXPAND | wx.RIGHT, 20)
-            
-
-            # toolbar
-            #toolbar = self.CreateToolBar()
-            #makeTreeItem = toolbar.AddLabelTool(wx.ID_ANY, 'Make tree', wx.Bitmap('/home/arish/Downloads/ptree.png'))
-            #toolbar.Realize()
-
-
     
 #--------------------- Annotator class methods -----------------------#
 
@@ -152,10 +102,6 @@ class Annotator(wx.Frame):
                     seen_nodes[node.__str__()] = nodeID
         
            
-    #    rf_widget.fSizer.Layout()
-    #    rf_widget.Fit()
-
-
          
     def NLTKTree(self, event):
         """Draw NLTK tree and display in Tk window"""
